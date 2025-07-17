@@ -10,16 +10,16 @@ options.add_argument("user-agent=Mozilla/5.0")
 driver = webdriver.Chrome(options=options)
 
 # Step 1: Login to the site
-driver.get("https://elearning.athensfashionclub.com/login/index.php")
-driver.find_element(By.ID, 'username').send_keys('ssd_fot')
-driver.find_element(By.ID, 'password').send_keys('Kala111!')
+driver.get("https://------") % the site URL
+driver.find_element(By.ID, 'username').send_keys('Your Username') #input your Username
+driver.find_element(By.ID, 'password').send_keys('Your Password') #input your Password
 driver.find_element(By.ID, 'loginbtn').click()
 
 # Wait for login to finish
 time.sleep(5)
 
 # Step 2: Go to the course page
-driver.get("https://elearning.athensfashionclub.com/course/view.php?id=116")
+driver.get("https://-----") #the page containing the notes (URL)
 time.sleep(5)
 
 # Step 3: Scrape the data
@@ -53,5 +53,5 @@ driver.quit()
 
 # Step 4: Save to Excel
 df = pd.DataFrame(data)
-df.to_excel("trial.xlsx", index=False)
+df.to_excel("MyNotes.xlsx", index=False)
 print("✅ Saved to 'activities_by_class.xlsx'")
