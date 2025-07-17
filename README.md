@@ -1,13 +1,8 @@
 # Web-scraping-
 using Selenium 
 
-I wanted to save the links of some pdf's (containing my classes notes) to an excel sheet so i can have acces to them even if my username and password stopped being active .I didn't want to use up space in my computer and i found this to be the most efficient method.  
+This project automates the process of saving PDF lecture notes from a password-protected educational platform to an Excel spreadsheet. Since my access to these notes depended on temporary login credentials, I created this solution to maintain permanent access without storing the files locally and using unnecessary disk space.
 
-I started this project using Beautifulsoup, but i soon realized that because of the authentication that was needed to access the page, my program wouldn't return any objects. And i couldn't find a way to do it with Beautifulsoup. So that's why i used Selenium.
+Initially, I attempted to use BeautifulSoup for scraping, but quickly encountered limitations with the platform's authentication system. This led me to switch to Selenium, which could properly handle the login process and interact with the dynamic elements of the site. After authentication, the script navigates to the course page containing all class units and their subunits, where each subunit link leads directly to a PDF file.
 
-The goal of this project was to get past the authentication wall and get to the page that contained the notes. That page had all of the class titles and under each one of them, all of the subunits. The text of the subunit is also a link and if you click that you get access to the pdf. 
-I also used dataframes so i can save it to an excel .
-
-So the information that is scrapped is the title of the unit , the title of the subunit and lastly the link of the pdf (for all units and subunits). If one subunit or unit is empty then it moves on until it reaches the end of the page.
-
-(The code contains a lot of comments so i think is readable.)
+The program extracts three key pieces of information for each entry: the unit title, subunit title, and PDF link. These are organized into a pandas DataFrame for clean structuring before being exported to Excel. The script is designed to skip any empty units or subunits, processing all available content until reaching the end of the page. Detailed comments throughout the code make each step clear and understandable.
