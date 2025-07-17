@@ -10,4 +10,4 @@ I also used dataframes so i can save it to an excel .
 
 So the information that is scrapped is the title of the unit , the title of the subunit and lastly the link of the pdf (for all units and subunits). If one subunit or unit is empty then it moves on until it reaches the end of the page.
 
-(The code containes a lot of comments so i think is readable.)
+(The code contains a lot of comments so i think is readable.)
